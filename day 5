@@ -1,0 +1,10 @@
+myName = input("What's your name?: ")
+if myName == "Aditya":
+  print("Hi Aditya")
+  message = input("What's up my man? ")
+  if message == "All good":
+    print("Good to hear that")
+  else :
+    print("Tell me more about it")
+else:
+ print("Who on earth are you?!")
