@@ -8,3 +8,25 @@ if myName == "Aditya":
     print("Tell me more about it")
 else:
  print("Who on earth are you?!")
+
+
+/*
+print("Marvel Movie Character Creator")
+print("Know your super power by answering the questions below")
+question_1 = input("Do you like 'hanging around'?: ")
+if question_1 == "Yes":
+  print("Then you're Spider-man")
+else:
+  question_2 = input("Do you have a 'gravelly' voice?: ")
+  if question_2 == "Yes":
+    print("Aww, then you're Korg")
+  else:
+    question_3 = input("Do you often feel 'Marvelous'?:  ")
+    if question_3 == "Yes":
+      print("Aha! You're Captain Marvel! Hi!")
+    else:
+      print("Look elsewhere")
+
+
+
+*/
