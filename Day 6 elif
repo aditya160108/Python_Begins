@@ -1,3 +1,5 @@
+/* Seasons*/
+
 season = input("what is your favorite season? ")
 if season == "spring":
   print("Ah! The birds are chirping and flowers blooming.")
@@ -9,3 +11,19 @@ elif season == "winter":
   print("Stay warm by the fire and watch the snow fall.")
 else: 
   print("I don't know that season. Please try again.")
+
+
+/* Login manager */
+
+print("My Login System")
+print("+++++++++++++++")
+username = input("Username > ")
+password = input("Password > ")
+if username == "ankita" and password == "markanthony":
+  print("Hi Ankita, Good to have you back")
+elif username == "david" and password == "totallynot bald":
+  print("Why hello there David, what a lovely accent you have.")
+elif  username == "aditya" and password == "Ankita":
+  print("Why hello there Aditya, what a lovely smile you have.")
+else:
+  print("Invalid Credentials")
