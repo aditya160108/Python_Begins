@@ -1,3 +1,4 @@
+print("🪨 📄 ✂️")
 print("Rock Paper Scissors Begins")
 print("++++++++++++++++++++++++++")
 print()
