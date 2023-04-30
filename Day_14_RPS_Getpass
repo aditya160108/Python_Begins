@@ -1,0 +1,25 @@
+print("Rock Paper Scissors Begins")
+print("++++++++++++++++++++++++++")
+print()
+print("Input R for Rock")
+print("Input P for Paper")
+print("Input S for Scissors")
+print()
+from getpass import getpass as input
+player1_move = input("player1 Input your move: ")
+player2_move = input("player2 Input your move: ")
+if player1_move == "R" and player2_move == "P":
+  print()
+  print("\033[47m","player1 just slayed player2","\033[0m")
+elif player1_move == "P" and player2_move == "S":
+  print()
+  print("\033[44m","player2 just slayed player1","\033[0m")
+elif player1_move == "R" and player2_move == "S":
+  print()
+  print("\033[47m","player1 just slayed player2","\033[0m")
+elif player1_move == "P" and player2_move == "R":
+  print()
+  print("\033[44m","player2 just slayed player1","\033[0m")
+else:
+  print()
+  print("Game Tied")
