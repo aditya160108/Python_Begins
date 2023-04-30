@@ -1,0 +1,13 @@
+print("Fill in the blank lyrics! Let's see if you are as cool as me")
+print()
+counter = 0
+print("Never going to ______ you up.")
+print()
+while True:
+  blank = input("Type in the blank lyrics. ")
+  if blank == "give":
+    print("Well done! It only took you",counter,"attempts to figure it out.")
+    break
+  else:
+    print("Try Again")
+    counter += 1
