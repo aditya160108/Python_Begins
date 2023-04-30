@@ -1,0 +1,10 @@
+/* Greeting generator*/
+
+
+name = input("Name: ")
+if name == "aditya" or name == "Aditya":
+  print("Hello Aditya")
+elif name == "hercules" or name == "Hercules":
+  print("Hey Hercules")
+else:
+  print("Hi", name)
