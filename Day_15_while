@@ -10,5 +10,5 @@ while exit != "yes":
   elif animal == "lion":
     print("Lions roar")
   else:
-    print("Sorry, the",animal,"needs to be added in the code.")
+    print("Sorry,",animal,"needs to be added in the code.")
   exit = input("Do you want to exit? ")
