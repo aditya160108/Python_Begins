@@ -1,0 +1,14 @@
+print("Animal Sound Generator")
+print()
+exit = ""
+while exit != "yes":
+  animal = input("Which animal do you want? ")  
+  if animal == "cow":
+    print ("A cow goes moo.")
+  elif animal == "lemur":
+    print("Ummm...the Lesser Spotter Lemur goes awooga.")
+  elif animal == "lion":
+    print("Lions roar")
+  else:
+    print("Sorry, the",animal,"needs to be added in the code.")
+  exit = input("Do you want to exit? ")
