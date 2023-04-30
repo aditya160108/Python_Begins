@@ -1,0 +1,60 @@
+/* TV show*/
+tvShow = input("What is your favorite tv show? ")
+if tvShow == "peppa pig":
+  print("Ugh, why?")
+  faveCharacter = input("Who is your favorite character? ")
+  if faveCharacter == "daddy pig":
+    print("Right answer")
+  else:
+    print("Nah, Daddy Pig's the greatest")
+elif tvShow == "Dr. House":
+  print("Yupp, that's the one")
+  faveCharacter = input("Who is your favorite character? ")
+  if faveCharacter == "Dr. House":
+    print("Nice")
+  else:
+    print("Nah, Dr. House's the greatest")
+elif tvShow == "paw patrol":
+  print("Aww, sad times")
+else:
+  print("Yeah, that's cool and all…")
+  
+/* Pizza or Hamburger */
+
+order = input("What would you like to order: pizza or hamburger? ")
+if order == "hamburger":
+  print("Thank you.")
+  cheese = input("Do you want cheese?")
+  if cheese == "yes":
+    print("You got it.")
+  else: 
+    print("No cheese it is.")
+elif order == "pizza":
+  print("Pizza coming up.")
+  toppings = input("Do you want pepperoni on that?")
+  if toppings == "yes":
+    print("We will add pepperoni.")
+else:
+  print("Your pizza will not have pepperoni.")
+  
+/*Anime test*/
+
+print("Fake Fan Finder")
+print("+++++++++++++++")
+anime = input("What's your favorite anime? ")
+if anime == "one piece":
+  character = input("Name one of the character?")
+  if character == "nami":
+    job = input("Pure Chance, what's her job on the ship? ")
+    if job == "navigator":
+      bounty = input("What's her first bounty? ")
+      if bounty == "ummm":
+        print ("See fake fan")
+      else:
+        print("I knew it")
+  else:
+    print("whatever")
+    
+else:
+  print("No it is not.")
+    
