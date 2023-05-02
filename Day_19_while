@@ -1,0 +1,27 @@
+print("Welcome to Guess the number")
+print("Chance of winning this game is One-Million-To-One")
+print()
+print("Guess a number between 1 and 1,000,000 and I will tell you if you are too low, too high, or get it correct.")
+print()
+print("Let's play!")
+counter = 1
+number = 500000
+while True:
+  guess = int(input("What is your guess? "))
+  print()
+  if guess < 0:
+    print("Now we'll never know what the answer is …")
+    exit()
+  if guess < number:
+    print("That number is too low. Try again!")
+    counter += 1
+  elif guess > number:
+    print("That number is too high. Try again!")
+    counter += 1
+    continue
+  elif guess == number:
+    print("You are a winner! 🥳🥳")
+    break
+  else:
+    print("That is not a number I recognize.")
+print("It took you", counter, "attempt(s) to get the correct answer.")
