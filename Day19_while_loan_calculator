@@ -1,0 +1,16 @@
+print("Loan Calculator")
+print()
+p = int(input("Enter the amount that you borrowed: "))
+principal = p
+rate = float(input("Enter the rate at which you borrowed: "))
+r = rate/100
+time = int(input("Enter the number of years for which you borrowed: "))
+print()
+t = 1
+for t in range(time):
+  p = p*(1+r)
+  t += 1
+  print("Year",t,"is",p,"at",rate,"% APR")
+a = p-principal
+print()
+print("You paid $",round(a,2),"in interest.")
