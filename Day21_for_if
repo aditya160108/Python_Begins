@@ -1,0 +1,22 @@
+print("Welcome to Math Facts Game")
+print()
+print("How well do you know your math facts? Pick a number and I will give you 10 math facts to solve.")
+number = int(input("Name your multiples: "))
+n = (number*10)+1
+counter = 1
+w = 0
+for i in range(number,n,number):
+  print(number,"x",counter,"=")
+  answer = int(input())
+  if answer == i:
+    print("You got it right!")
+    print(number,"x",counter,"=",i)
+    print()
+    w += 1
+    counter += 1
+  elif answer != i:
+    print("Nope! the answer is",i)
+    print()
+    counter += 1
+    continue
+print("You scored",w,"out of 10")
