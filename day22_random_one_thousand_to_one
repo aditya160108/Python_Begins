@@ -1,0 +1,32 @@
+import random
+
+print("Welcome to Guess the number")
+print("Chance of winning this game is One-Thousand-To-One")
+print()
+print("Guess a number between 1 and 1,000 and I will tell you if you are too low, too high, or get it correct.")
+print()
+print("Let's play!")
+counter = 1
+while True:
+  number = random.randint(1,1000)
+  guess = int(input("What is your guess? "))
+  print()
+  if guess < 0:
+    print("Now we'll never know what the answer is …")
+    exit()
+  if guess < number:
+    print("That number is too low.", number, "was the correct number.", "Try again!")
+    print()
+    counter += 1
+  elif guess > number:
+    print("That number is too high.", number, "was the correct number.", " Try again!")
+    counter += 1
+    print()
+    continue
+  elif guess == number:
+    print("You are a winner! 🥳🥳")
+    print(number, "was the correct number.")
+    break
+  else:
+    print("That is not a number I recognize.")
+print("It took you", counter, "attempt(s) to get the correct answer.")
