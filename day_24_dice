@@ -1,0 +1,14 @@
+import random
+print("+++\033[36mInfinity Dice\033[0m+++")
+print()
+def dice():
+   while True:
+    q = input("Do you want to role the dice? ")
+    print()
+    if q == "yes":
+      s = int(input("Number of sides: "))
+      number = random.randint(1, s)
+      print("You rolled",number)
+    else:
+     break
+dice()
