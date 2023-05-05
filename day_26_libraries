@@ -1,0 +1,53 @@
+from replit import audio
+import os, time
+
+def play_audio():
+  source = audio.play_file('audio.wav')
+  source.paused = False
+  while True:
+    print("Playing audio.wav")
+    time.sleep(1)
+    os.system("clear")
+    print("🎵 MYPOD MUSIC PLAYER")
+    time.sleep(1)
+    os.system("clear")
+    print("Press 1 to toggle playback")
+    time.sleep(1)
+    os.system("clear")
+    print("Press 2 to stop")
+    time.sleep(1)
+    os.system("clear")
+    user_input = input("⏯︎    ")
+    
+    if user_input == "1":
+      source.paused = not source.paused
+      
+    elif user_input == "2":
+      source.paused = True
+      display_menu
+      break
+      
+    else:
+      display_menu
+      
+    os.system("clear")
+    print("Press 1 to toggle playback")
+    print("Press 2 to stop")
+
+def display_menu():
+  os.system("clear")
+  print("🎵 MYPOD MUSIC PLAYER")
+  print("Press 1 to play")
+  print("Press 2 to exit")
+  print("Press anything else to show the menu")
+
+while True:
+  display_menu()
+  q = input(": ")
+  os.system("clear")
+  if q == "1":
+    play_audio()
+  elif q == "2":
+    break
+  else:
+    continue
