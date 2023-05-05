@@ -1,0 +1,21 @@
+import random
+
+print("+++\033[36m Character Stat Generator\033[0m+++")
+print()
+
+
+def char():
+  while True:
+    n1 = random.randint(1, 6)
+    n2 = random.randint(1, 8)
+    health = n1 * n2
+    q = input("Do you want to play? ")
+    if q == "yes" or q == "YES" or q == "Yes" or q == "Y":
+      name = input("What is the name of your character? ")
+      print("\033[33m Their health is\033[0m", health)
+    else:
+      break
+
+
+game = char()
+print(game)
