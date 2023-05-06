@@ -1,0 +1,41 @@
+import random, os, time
+
+def name():
+  print("\033[91mCharacter Builder 🧑 🧝 🧙‍ 🧌 \033[00m")
+  n = input("\033[92mName your Legend: \033[00m")
+  print("\033[96mChoose your character type:\033[00m")
+  print("\033[94m1. Human\033[00m")
+  print("\033[95m2. Elf\033[00m")
+  print("\033[93m3. Wizard\033[00m")
+  print("\033[91m4. Orc\033[00m")
+  ct = input("\033[92mEnter character type number: \033[00m")
+  while ct not in ['1', '2', '3', '4']:
+    print("\033[91mInvalid character type. Please choose a valid option.\033[00m")
+    ct = input("\033[92mEnter character type number: \033[00m")
+  ct_names = ['Human', 'Elf', 'Wizard', 'Orc']
+  ct_name = ct_names[int(ct)-1]
+  six_dice = random.randint(1, 6)
+  twelve_dice = random.randint(1, 12)
+  h = six_dice * twelve_dice
+  s = (h/2) + 12
+  print("\033[92m" + n + "\033[00m")
+  print("\033[96mCharacter Type: \033[00m", "\033[1m" + ct_name + "\033[0m")
+  print("\033[94mHealth: \033[00m", "\033[1m" + str(h) + "\033[0m")
+  print("\033[95mStrength: \033[00m", "\033[1m" + str(s) + "\033[0m")
+  print()
+  print(f" \033[97m May {n} the {ct_name} go down in legend. \033[00m")
+  time.sleep(5)
+  os.system("clear")
+  q = input("\033[96mDo you want to play again? \033[00m")
+  os.system("clear")
+  game(q)
+
+def game(q):
+  while True:
+    if q == 'Yes' or q == 'yes' or q == 'YES' or q == 'y' or q == 'Y':
+      name()
+      q = "No"
+    else:
+      break
+
+game("yes")
