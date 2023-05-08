@@ -1,3 +1,5 @@
+#This is a text-based Python game that allows the user to create their own character and then battle it out against another character. The game includes functions that simulate a battle between two characters, randomly generating hits and calculating damage based on their strength and health. The characters can be of one of four types: Human, Elf, Wizard, or Orc, with different attributes for each type. The game prompts the user to input a name for their character and then select a character type. Afterward, it randomly generates their character's health and strength based on their type. The user then inputs a name for their opponent and selects a character type for them as well, with their health and strength also generated randomly based on their type. The battle starts after character creation, and the game will continue until one of the characters has been defeated. During the battle, each round, the program will display who took a hit, how much damage was dealt, and whether or not both characters attacked at the same time with no damage dealt.
+
 import random
 import os
 import time
