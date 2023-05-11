@@ -1,5 +1,7 @@
-#This is a text-based Python game that allows the user to create their own character and then battle it out against another character. The game includes functions that simulate a battle between two characters, randomly generating hits and calculating damage based on their strength and health. The characters can be of one of four types: Human, Elf, Wizard, or Orc, with different attributes for each type. The game prompts the user to input a name for their character and then select a character type. Afterward, it randomly generates their character's health and strength based on their type. The user then inputs a name for their opponent and selects a character type for them as well, with their health and strength also generated randomly based on their type. The battle starts after character creation, and the game will continue until one of the characters has been defeated. During the battle, each round, the program will display who took a hit, how much damage was dealt, and whether or not both characters attacked at the same time with no damage dealt.
+"""Welcome to Pynecone! This file outlines the steps to create a basic app."""
+from pcconfig import config
 
+import pynecone as pc
 import random
 import os
 import time
@@ -25,29 +27,31 @@ def battle(h,h1, s, s1, n, n1):
         w1 = random.randint(1,6)
         d = 1
         d1 = 1
+
         if w > w1:
             print("Round", counter)
-            d = math.ceil(s - s1)
+            d = math.ceil(h1-s)
             if d < 0:
               d = -d
-            h1 -= d
+            h1 -= s
             print(n1, "took a hit, with", d, "damage.")
             time.sleep(5)
             os.system("clear")
             if h1>0:
-              counter += 1
+            	counter += 1
+
         
         elif w < w1:
             print("Round", counter)            
-            d1 = math.ceil(s1 - s)
+            d1 = h-s1
             if d1 < 0:
               d1 = -d1
-            h -= d1
+            h -= s1
             print(n, "took a hit, with", d1, "damage.")
             time.sleep(5)
             os.system("clear")
-            if h > 0:
-              counter += 1
+            if h>0:
+            	counter += 1
             
         else:
             print("Round", counter)
@@ -120,4 +124,37 @@ h = 40  # or any other value you want to use
 s = 20  # or any other value you want to use
 w = 5 # or any other value you want to use
 
-create_character(ct_name,h,s,ct_name1, h1, s1)
+filename = f"{config.app_name}/{config.app_name}.py"
+
+
+class State(pc.State):
+    """The app state."""
+
+    pass
+
+
+def index() -> pc.Component:
+    return pc.center(
+        pc.vstack(
+            pc.heading("Character Builder!", font_size="2em"),
+            pc.box(create_character(ct_name,h,s,ct_name1, h1, s1)),
+            pc.link(
+                "Let's Begin!",
+                border="0.1em solid",
+                padding="0.5em",
+                border_radius="0.5em",
+                _hover={
+                    "color": "rgb(107,99,246)",
+                },
+            ),
+            spacing="1.5em",
+            font_size="2em",
+        ),
+        padding_top="10%",
+    )
+
+
+# Add state and page to the app.
+app = pc.App(state=State)
+app.add_page(index)
+app.compile()
